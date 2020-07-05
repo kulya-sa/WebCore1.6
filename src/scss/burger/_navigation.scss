@@ -1,0 +1,36 @@
+.navigation {
+  &__list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  &__item {
+    position: relative;
+    height: 24px;
+    margin-bottom: 24px;
+    display: block;
+
+    &:hover a:before {
+      content: "";
+      display: block;
+      height: 32px;
+      width: 4px;
+      position: absolute;
+      top: -4px;
+      left: -24px;
+      background: url(../img/menu/nav/highlight.svg);
+      background-size: contain;
+    }
+  }
+
+  &__link {
+    color: #1b1c21;
+    text-decoration: none;
+    line-height: 24px;
+
+    &:hover {
+      color: #7e7e82;
+    }
+  }
+}

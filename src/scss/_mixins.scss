@@ -1,0 +1,23 @@
+@mixin regular {
+  font-family: "TT Lakes";
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin medium {
+  font-family: "TT Lakes";
+  font-weight: 500;
+  font-style: normal;
+}
+
+@mixin bold {
+  font-family: "TT Lakes";
+  font-weight: bold;
+  font-style: normal;
+}
+
+@mixin mediaQ($breakpoint) {
+  @media screen and($breakpoint) {
+    @content;
+  }
+}

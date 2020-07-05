@@ -1,0 +1,29 @@
+.comercial {
+  max-width: 192px;
+  cursor: pointer;
+
+  @include mediaQ($mqT) {
+    max-width: 100%;
+  }
+  &:hover img {
+    animation: arrow 1s;
+  }
+}
+
+@keyframes arrow {
+  25% {
+    transform: translateX(10px);
+  }
+  37% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  62% {
+    transform: translateX(0px);
+  }
+  75% {
+    transform: translateX(2.5px);
+  }
+}

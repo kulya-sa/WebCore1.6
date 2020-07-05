@@ -1,0 +1,30 @@
+.phone {
+  position: fixed;
+  top: 0;
+  right: -150%;
+  z-index: 10;
+  width: 100%;
+  min-width: 320px;
+  max-width: 440px;
+  height: 100vh;
+  background-color: #fff;
+  box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2),
+    -2px 0px 4px rgba(69, 79, 126, 0.02);
+  border-left: 1px solid $border_color;
+  border-radius: 1px;
+  transition: 0.5s;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 24px 16px;
+  }
+
+  &__headline {
+    margin-bottom: 24px;
+  }
+
+  &--visible {
+    right: 0;
+  }
+}

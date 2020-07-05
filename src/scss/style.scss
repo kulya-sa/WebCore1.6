@@ -1,0 +1,51 @@
+@import "normalize";
+@import "fonts";
+@import "variables";
+@import "mixins";
+
+@import "ui/button";
+@import "ui/swiper";
+@import "ui/expand";
+@import "ui/title";
+@import "ui/headline";
+@import "ui/form";
+
+@import "blur";
+
+@import "burger/burger";
+@import "burger/header";
+@import "burger/navigation";
+@import "burger/footer";
+@import "burger/adress";
+@import "burger/locali";
+
+@import "feedback/feedback";
+
+@import "phone/phone";
+
+@import "main/header";
+@import "main/main";
+@import "main/filter";
+@import "main/info";
+@import "main/brands/brands";
+@import "main/type/type";
+@import "main/price/price";
+@import "main/price/slide";
+@import "main/price/table";
+@import "main/price/description";
+@import "main/price/comercial";
+@import "main/footer";
+
+html {
+  @include regular;
+}
+
+body {
+  background: $bg_color;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+* {
+  box-sizing: border-box;
+}

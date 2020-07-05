@@ -1,0 +1,25 @@
+.blur-hidden {
+  display: none;
+  animation: blur 0.25s;
+}
+
+.blur--visible {
+  width: 100vw;
+  height: 2000px;
+  position: absolute;
+  z-index: 2;
+  background: #ffffff;
+  mix-blend-mode: normal;
+  animation: blur 0.25s;
+  overflow: hidden;
+}
+
+@keyframes blur {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 0.96;
+  }
+}

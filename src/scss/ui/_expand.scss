@@ -1,0 +1,20 @@
+.expand {
+  display: none;
+  margin-left: 24px;
+  margin-bottom: 32px;
+  &__arrows {
+    transition: transform 0.25s;
+
+    &--rotated {
+      transform: rotate(-180deg);
+    }
+  }
+  @include mediaQ($mqT) {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+    max-width: 133px;
+    height: 24px;
+  }
+}

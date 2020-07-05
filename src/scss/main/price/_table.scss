@@ -1,0 +1,83 @@
+.table {
+  display: none;
+  @include mediaQ($mqT) {
+    display: table;
+    border-collapse: collapse;
+    margin: 0 auto;
+    min-width: 720px;
+    max-width: 1056px;
+    width: 100%;
+    white-space: nowrap;
+    &__row {
+      padding: 0 16px;
+      position: relative;
+      height: 64px;
+
+      &:not(:last-of-type):after {
+        position: absolute;
+        bottom: 0;
+        left: 16px;
+        content: "";
+        display: block;
+        min-width: 688px;
+        max-width: 1008px;
+        width: 95%;
+        height: 1px;
+        background: #eaeaea;
+      }
+    }
+    &__header {
+      @include medium;
+      text-align: left;
+      font-size: 14px;
+      line-height: 16px;
+      color: #7e7e82;
+      mix-blend-mode: normal;
+      opacity: 0.72;
+    }
+    &__head {
+      padding: 23px 0;
+      &:first-of-type {
+        padding-left: 16px;
+      }
+    }
+    &__body {
+      padding: 23px 16px;
+
+      border-radius: 6px;
+    }
+    &__data {
+      background-color: #fff;
+      padding: 23px 0;
+      font-size: 14px;
+      line-height: 18px;
+      letter-spacing: 0.2px;
+      color: #1b1c21;
+      &:first-of-type {
+        padding-left: 16px;
+      }
+      &:nth-of-type(2) {
+        padding-right: 16px;
+      }
+      &:last-of-type {
+        padding-right: 16px;
+      }
+    }
+    &__submit {
+      width: 119px;
+    }
+  }
+}
+
+.table__row:nth-of-type(1) .table__data:nth-of-type(1) {
+  border-top-left-radius: 6px;
+}
+.table__row:nth-of-type(1) .table__data:nth-last-of-type(1) {
+  border-top-right-radius: 6px;
+}
+.table__row:nth-last-of-type(1) .table__data:nth-of-type(1) {
+  border-bottom-left-radius: 6px;
+}
+.table__row:nth-last-of-type(1) .table__data:nth-last-of-type(1) {
+  border-bottom-right-radius: 6px;
+}

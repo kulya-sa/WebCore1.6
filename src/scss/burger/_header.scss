@@ -1,0 +1,10 @@
+.header--burger {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .header__logo {
+    margin-left: 16px;
+    margin-right: auto;
+  }
+}

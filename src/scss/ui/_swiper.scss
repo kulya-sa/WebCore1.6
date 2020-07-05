@@ -1,0 +1,73 @@
+.swiper {
+  &-container {
+    padding-left: 16px;
+    padding-bottom: 52px;
+    @include mediaQ($mqT) {
+      overflow: visible;
+      padding: 0;
+    }
+  }
+
+  &-wrapper {
+    margin-top: 16px;
+    max-height: 170px;
+    transition: all 0.5s;
+    &--expanded {
+      max-height: 500px;
+    }
+
+    @include mediaQ($mqT) {
+      overflow: hidden;
+      box-sizing: border-box;
+      display: grid;
+      justify-items: center;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 24px;
+      margin-bottom: 24px;
+      padding: 0 24px;
+    }
+
+    @include mediaQ("min-width: 1030px") {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  &-pagination {
+    bottom: 24px !important;
+    @include mediaQ($mqT) {
+      display: none;
+    }
+  }
+
+  &-slide {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    max-width: 240px;
+    height: 72px;
+    cursor: pointer;
+    border-radius: 6px;
+    border: 1px solid #eaeaea;
+    background-color: #ffffff;
+
+    &:hover .swiper__button {
+      transform: scale(1.05) rotate(90deg);
+    }
+
+    &-expanded {
+      display: flex;
+    }
+  }
+}
+.swiper__button {
+  width: 40px;
+  height: 40px;
+  border: 2px solid $pink_color;
+  border-radius: 20px;
+  background: url(/img/brands/arrow.svg) center no-repeat;
+  cursor: pointer;
+  transition: 0.5s;
+  transition-property: transform;
+}

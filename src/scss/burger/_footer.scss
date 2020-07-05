@@ -1,0 +1,18 @@
+.burger__m-footer {
+  &__activity {
+  }
+
+  & .activity {
+    display: flex;
+
+    &__button {
+      margin-right: 16px;
+    }
+  }
+
+  &__address {
+  }
+
+  &__locali {
+  }
+}

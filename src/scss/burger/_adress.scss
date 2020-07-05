@@ -1,0 +1,16 @@
+.address {
+  font-style: normal;
+
+  &__email {
+    a {
+      color: #1b1c21;
+      text-decoration: none;
+    }
+  }
+
+  &__phone {
+    margin: 0 0 40px 0;
+    font-size: 24px;
+    font-weight: bold;
+  }
+}

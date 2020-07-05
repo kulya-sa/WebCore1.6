@@ -1,0 +1,13 @@
+.locali {
+  &__option {
+    cursor: pointer;
+  }
+
+  &__input {
+    appearance: none;
+  }
+
+  & input:checked+.locali__name {
+    color: #7e7e82;
+  }
+}

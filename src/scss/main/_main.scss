@@ -1,0 +1,61 @@
+.main {
+  &__head {
+    padding-left: 16px;
+    padding-right: 16px;
+
+    @include mediaQ($mqT) {
+      padding-left: 24px;
+    }
+    @include mediaQ($mqDl) {
+      padding-left: 42px 25px;
+    }
+  }
+}
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+
+  &__headline {
+    display: flex;
+    align-items: center;
+
+    & h1 {
+      @include bold;
+      font-size: 28px;
+      letter-spacing: -0.6px;
+      line-height: 40px;
+      margin: 0;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 1px;
+      width: 4px;
+      height: 40px;
+      background: url(../img/main/highlight.svg) no-repeat;
+    }
+  }
+}
+
+.action {
+  display: none;
+
+  &__button {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    @include medium;
+
+    &:first-of-type {
+      margin-right: 32px;
+    }
+
+    & button {
+      margin-left: 8px;
+    }
+  }
+}

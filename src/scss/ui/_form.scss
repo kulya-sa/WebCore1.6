@@ -1,0 +1,81 @@
+.form {
+  display: flex;
+  flex-direction: column;
+
+  &__input {
+    height: 48px;
+    padding: 12px 16px;
+    margin-bottom: 16px;
+
+    background: #ffffff;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+
+    &--text {
+      height: 118px;
+      resize: none;
+    }
+  }
+
+  &__submit {
+    width: 136px;
+  }
+
+  &__privacy {
+    font-size: 14px;
+    line-height: 16px;
+    color: #7e7e82;
+
+    & a {
+      text-decoration: none;
+      color: $pink_color;
+    }
+  }
+}
+
+.submit {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: auto;
+  height: 32px;
+  background: $pink_color;
+  border: none;
+  border-radius: 16px;
+  @include bold;
+  font-size: 12px;
+  line-height: 24px;
+  letter-spacing: -0.15px;
+  text-transform: uppercase;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background 0.25s;
+  &:hover {
+    background-color: $hover_color;
+    & img {
+      animation: submit 1s;
+    }
+  }
+}
+
+@keyframes submit {
+  25% {
+    transform: translateX(8px);
+  }
+  37% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  62% {
+    transform: translateX(0px);
+  }
+  75% {
+    transform: translateX(2.5px);
+  }
+}

@@ -1,0 +1,22 @@
+.headline {
+  display: flex;
+  align-items: center;
+
+  & h1 {
+    @include bold;
+    font-size: 28px;
+    letter-spacing: -0.6px;
+    line-height: 40px;
+    margin: 0;
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 1px;
+    width: 4px;
+    height: 40px;
+    background: url(../img/main/highlight.svg) no-repeat;
+  }
+}

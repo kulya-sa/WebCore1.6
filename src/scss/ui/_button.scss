@@ -1,0 +1,99 @@
+.button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background-color: $pink_color;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition: 0.25s;
+  transition-property: background-color, transform;
+  cursor: pointer;
+
+  &--hidden {
+    display: none;
+    @include mediaQ($mqT) {
+      display: block;
+    }
+  }
+
+  &:hover {
+    background-color: $hover_color;
+  }
+
+  &--burger {
+    background-image: url(/img/header/burger.svg);
+  }
+
+  &--call {
+    background-image: url(/img/header/call.svg);
+  }
+
+  &--chat {
+    background-image: url(/img/header/chat.svg);
+  }
+
+  &--profile {
+    background-image: url(/img/header/profile.svg);
+    @include mediaQ($mqT) {
+      margin-right: 20px;
+    }
+  }
+
+  &--repair {
+    background-image: url(/img/header/repair.svg);
+    @include mediaQ($mqT) {
+      margin-left: 20px;
+
+      &::before {
+        content: "";
+        display: block;
+        position: relative;
+        left: -30px;
+        width: 2px;
+        height: 32px;
+        border-radius: 1px;
+        background-color: #eaeaea;
+        margin-right: 20px;
+      }
+    }
+  }
+
+  &--checkstatus {
+    background-image: url(/img/header/checkstatus.svg);
+  }
+
+  &--close {
+    background-image: url(/img/menu/header/burger-close.svg);
+
+    &:hover {
+      transform: rotate(15deg);
+      animation: backwards;
+    }
+  }
+
+  &--search {
+    background-image: url(/img/menu/header/search.svg);
+  }
+
+  &--phone {
+    background-image: url(/img/menu/footer/phone.svg);
+  }
+
+  &--chat {
+    background-image: url(/img/menu/footer/chat.svg);
+  }
+
+  &--profile {
+    background-image: url(/img/menu/footer/profile.svg);
+  }
+
+  &--modal {
+    margin-bottom: 40px;
+
+    @include mediaQ($mqT) {
+      position: absolute;
+      left: -64px;
+    }
+  }
+}

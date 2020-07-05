@@ -1,0 +1,33 @@
+.price__slide {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 16px;
+}
+
+.slide__head {
+  margin: 0;
+  @include medium;
+  font-size: 14px;
+  line-height: 16px;
+  color: #7e7e82;
+  mix-blend-mode: normal;
+  opacity: 0.72;
+}
+
+.slide__description {
+  margin: 0;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+  color: #1b1c21;
+}
+
+.slide__submit {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  width: 119px;
+  height: 32px;
+}

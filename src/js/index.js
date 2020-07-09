@@ -7,7 +7,6 @@ import * as price from "./price.js";
 import * as expand from "./expand.js";
 
 const blur = document.querySelector(".blur");
-const comercial = document.querySelector(".comercial");
 const actionFeedback = document.querySelector("#feedback");
 const actionPhone = document.querySelector("#phone");
 
@@ -47,10 +46,6 @@ actionPhone.addEventListener("click", () => {
 
 phone.closeButton.addEventListener("click", () => {
   phone.close();
-});
-
-comercial.addEventListener("click", () => {
-  phone.open();
 });
 
 /////////

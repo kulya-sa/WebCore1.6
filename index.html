@@ -12,7 +12,7 @@
 
   
 
-  <div class="burger" data-visible="false">
+  <div class="burger modal" data-visible="false">
     <div class="wrapper burger__wrapper">
       <header class="burger__header header header--burger">
         <button class="header__button button button--close"></button>
@@ -79,7 +79,7 @@
 
   
 
-  <div class="feedback">
+  <div class="feedback modal">
     <div class="feedback__wrapper wrapper">
       <button class="feedback__button button button--close button--modal"></button>
       <div class="feedback__headline headline">
@@ -102,7 +102,7 @@
     </div>
   </div>
 
-  <div class="phone">
+  <div class="phone modal">
     <div class="phone__wrapper wrapper">
       <button class="phone__button button button--close button--modal"></button>
       <div class="phone__headline headline">
@@ -127,7 +127,7 @@
   <div class="blur"></div>
 
   
-
+  
   <header class="header header--page">
     <div class="header__wrapper wrapper">
       <button class="header__button button button--burger"></button>
@@ -150,10 +150,10 @@
         <h1>Услуги и сервисы</h1>
       </div>
       <div class="head__action action">
-        <span class="action__button">Оставить заявку
+        <span class="action__button" id="feedback">Оставить заявку
           <button class="button button--repair"></button>
         </span>
-        <span class="action__button">Статус ремонта
+        <span class="action__button" id="phone">Статус ремонта
           <button class="button button--checkstatus"></button>
         </span>
       </div>
@@ -197,66 +197,67 @@
       <div class="brands__title title">
         <h1 class="title__header">Ремонт техники различных брендов</h1>
       </div>
+      <div class="section__wrapper">
+        <div class="swiper-container" data-mobile="false">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="img/brands/lenovo.svg" alt="">
+              <button class="swiper__button"></button>
+            </div>
+            <div class="swiper-slide">
+              <img src="img/brands/samsung.svg" alt="">
+              <button class="swiper__button"></button>
+            </div>
+            <div class="swiper-slide">
+              <img src="img/brands/apple.svg" alt="">
+              <button class="swiper__button"></button>
+            </div>
+            <div class="swiper-slide">
+              <img src="img/brands/viewsonic.svg" alt="">
+              <button class="swiper__button"></button>
+            </div>
+            <div class="swiper-slide">
+              <img src="img/brands/bosch.svg" alt="">
+              <button class="swiper__button"></button>
+            </div>
+            <div class="swiper-slide">
+              <img src="img/brands/hp.svg" alt="">
+              <button class="swiper__button"></button>
+            </div>
+            <div class="swiper-slide">
+              <img src="img/brands/acer.svg" alt="">
+              <button class="swiper__button"></button>
+            </div>
+            <div class="swiper-slide">
+              <img src="img/brands/sony.svg" alt="">
+              <button class="swiper__button"></button>
+            </div>
+            <div class="swiper-slide">
+              <img src="img/brands/lenovo.svg" alt="">
+              <button class="swiper__button"></button>
+            </div>
+            <div class="swiper-slide">
+              <img src="img/brands/samsung.svg" alt="">
+              <button class="swiper__button"></button>
+            </div>
+            <div class="swiper-slide">
+              <img src="img/brands/apple.svg" alt="">
+              <button class="swiper__button"></button>
+            </div>
+            <div class="swiper-slide">
+              <img src="img/brands/viewsonic.svg" alt="">
+              <button class="swiper__button"></button>
+            </div>
 
-      <div class="swiper-container" data-mobile="false">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="img/brands/lenovo.svg" alt="">
-            <button class="swiper__button"></button>
-          </div>
-          <div class="swiper-slide">
-            <img src="img/brands/samsung.svg" alt="">
-            <button class="swiper__button"></button>
-          </div>
-          <div class="swiper-slide">
-            <img src="img/brands/apple.svg" alt="">
-            <button class="swiper__button"></button>
-          </div>
-          <div class="swiper-slide">
-            <img src="img/brands/viewsonic.svg" alt="">
-            <button class="swiper__button"></button>
-          </div>
-          <div class="swiper-slide">
-            <img src="img/brands/bosch.svg" alt="">
-            <button class="swiper__button"></button>
-          </div>
-          <div class="swiper-slide">
-            <img src="img/brands/hp.svg" alt="">
-            <button class="swiper__button"></button>
-          </div>
-          <div class="swiper-slide">
-            <img src="img/brands/acer.svg" alt="">
-            <button class="swiper__button"></button>
-          </div>
-          <div class="swiper-slide">
-            <img src="img/brands/sony.svg" alt="">
-            <button class="swiper__button"></button>
-          </div>
-          <div class="swiper-slide">
-            <img src="img/brands/lenovo.svg" alt="">
-            <button class="swiper__button"></button>
-          </div>
-          <div class="swiper-slide">
-            <img src="img/brands/samsung.svg" alt="">
-            <button class="swiper__button"></button>
-          </div>
-          <div class="swiper-slide">
-            <img src="img/brands/apple.svg" alt="">
-            <button class="swiper__button"></button>
-          </div>
-          <div class="swiper-slide">
-            <img src="img/brands/viewsonic.svg" alt="">
-            <button class="swiper__button"></button>
           </div>
 
+          <div class="swiper-pagination"></div>
         </div>
 
-        <div class="swiper-pagination"></div>
-      </div>
-
-      <div class="brands__expand expand" data-expanded="false">
-        <img class="expand__arrows" src="img/brands/expand.svg" alt="">
-        <div class="expand__text">Показать все</div>
+        <div class="brands__expand expand" data-expanded="false">
+          <img class="expand__arrows" src="img/brands/expand.svg" alt="">
+          <div class="expand__text">Показать все</div>
+        </div>
       </div>
     </section>
 
@@ -266,40 +267,41 @@
       <div class="type__title title">
         <h1 class="title__header">Ремонт техники различных видов</h1>
       </div>
+      <div class="section__wrapper">
+        <div class="swiper-container" data-mobile="false">
+          <div class="swiper-wrapper">
 
-      <div class="swiper-container" data-mobile="false">
-        <div class="swiper-wrapper">
-
-          <div class="swiper-slide type__slide">
-            <div class="type__name">Ремонт ноутбуков</div>
-            <button class="swiper__button type__button"></button>
+            <div class="swiper-slide type__slide">
+              <div class="type__name">Ремонт ноутбуков</div>
+              <button class="swiper__button type__button"></button>
+            </div>
+            <div class="swiper-slide type__slide">
+              <div class="type__name">Ремонт ноутбуков</div>
+              <button class="swiper__button type__button"></button>
+            </div>
+            <div class="swiper-slide type__slide">
+              <div class="type__name">Ремонт ноутбуков</div>
+              <button class="swiper__button type__button"></button>
+            </div>
+            <div class="swiper-slide type__slide">
+              <div class="type__name">Ремонт ноутбуков</div>
+              <button class="swiper__button type__button"></button>
+            </div>
+            <div class="swiper-slide type__slide">
+              <div class="type__name">Ремонт ноутбуков</div>
+              <button class="swiper__button type__button"></button>
+            </div>
+            <div class="swiper-slide type__slide">
+              <div class="type__name">Ремонт ноутбуков</div>
+              <button class="swiper__button type__button"></button>
+            </div>
+      
           </div>
-          <div class="swiper-slide type__slide">
-            <div class="type__name">Ремонт ноутбуков</div>
-            <button class="swiper__button type__button"></button>
+          <div class="swiper-pagination"></div>
+          <div class="brands__expand expand" data-expanded="false">
+            <img class="expand__arrows" src="img/brands/expand.svg" alt="">
+            <div class="expand__text">Показать все</div>
           </div>
-          <div class="swiper-slide type__slide">
-            <div class="type__name">Ремонт ноутбуков</div>
-            <button class="swiper__button type__button"></button>
-          </div>
-          <div class="swiper-slide type__slide">
-            <div class="type__name">Ремонт ноутбуков</div>
-            <button class="swiper__button type__button"></button>
-          </div>
-          <div class="swiper-slide type__slide">
-            <div class="type__name">Ремонт ноутбуков</div>
-            <button class="swiper__button type__button"></button>
-          </div>
-          <div class="swiper-slide type__slide">
-            <div class="type__name">Ремонт ноутбуков</div>
-            <button class="swiper__button type__button"></button>
-          </div>
-    
-        </div>
-        <div class="swiper-pagination"></div>
-        <div class="brands__expand expand" data-expanded="false">
-          <img class="expand__arrows" src="img/brands/expand.svg" alt="">
-          <div class="expand__text">Показать все</div>
         </div>
     </div></section>
 

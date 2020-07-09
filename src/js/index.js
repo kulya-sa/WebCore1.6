@@ -1,6 +1,4 @@
 import "../scss/style.scss";
-
-import * as variables from "./variables.js";
 import * as burger from "./burger.js";
 import * as feedback from "./feedback.js";
 import * as phone from "./phone.js";
@@ -10,6 +8,8 @@ import * as expand from "./expand.js";
 
 const blur = document.querySelector(".blur");
 const comercial = document.querySelector(".comercial");
+const actionFeedback = document.querySelector("#feedback");
+const actionPhone = document.querySelector("#phone");
 
 /////////
 
@@ -27,6 +27,10 @@ feedback.openButton.addEventListener("click", () => {
   feedback.open();
 });
 
+actionFeedback.addEventListener("click", () => {
+  feedback.open();
+});
+
 feedback.closeButton.addEventListener("click", () => {
   feedback.close();
 });
@@ -34,6 +38,10 @@ feedback.closeButton.addEventListener("click", () => {
 /////////
 
 phone.openButton.addEventListener("click", () => {
+  phone.open();
+});
+
+actionPhone.addEventListener("click", () => {
   phone.open();
 });
 

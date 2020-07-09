@@ -56,4 +56,21 @@
       }
     }
   }
+  .button--repair {
+    @include mediaQ($mqT) {
+      margin-left: 20px;
+
+      &::before {
+        content: "";
+        display: block;
+        position: relative;
+        left: -30px;
+        width: 2px;
+        height: 32px;
+        border-radius: 1px;
+        background-color: #eaeaea;
+        margin-right: 20px;
+      }
+    }
+  }
 }

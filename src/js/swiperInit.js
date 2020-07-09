@@ -5,6 +5,7 @@ Swiper.use([Pagination]);
 
 const swiperContainers = document.querySelectorAll(".swiper-container");
 let mySwiper = [];
+
 const swiperAdapt = () => {
   for (let i = 0; i < swiperContainers.length; i++) {
     if (
@@ -21,7 +22,9 @@ const swiperAdapt = () => {
       });
       swiperContainers[i].dataset.mobile = "true";
     }
-
+    if (mySwiper[i] === undefined) {
+      return;
+    }
     if (!variables.bpMobile.matches) {
       swiperContainers[i].dataset.mobile = "false";
       mySwiper[i].destroy(true, true);

@@ -42,7 +42,7 @@
   &__paragraph--desktop {
     display: none;
 
-    @include mediaQ($mqDm) {
+    @include mediaQ("min-width: 1020px") {
       display: inline-block;
     }
   }
@@ -50,21 +50,29 @@
   &__next {
     display: flex;
     align-items: center;
+    margin-top: 24px;
+    margin-bottom: 16px;
     @include medium;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.2px;
     color: #1b1c21;
 
-    margin-bottom: 16px;
+    cursor: pointer;
 
     &::before {
       content: "";
       display: block;
       width: 24px;
       height: 24px;
-      margin-right: 8px;
       background-image: url(../img/main/expand.svg);
+      transition: transform 0.25s;
+    }
+
+    &--expanded {
+      &::before {
+        transform: rotate(180deg);
+      }
     }
 
     @include mediaQ($mqT) {

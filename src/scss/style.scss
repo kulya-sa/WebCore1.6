@@ -9,6 +9,7 @@
 @import "ui/title";
 @import "ui/headline";
 @import "ui/form";
+@import "ui/section";
 
 @import "blur";
 
@@ -42,10 +43,21 @@ html {
 
 body {
   background: $bg_color;
+  position: relative;
   max-width: 1440px;
   margin: 0 auto;
 }
 
 * {
   box-sizing: border-box;
+}
+
+body > header,
+body > main,
+body > footer {
+  @include mediaQ($mqDl) {
+    transition: all 1s;
+    width: 1120px;
+    transform: translateX(320px);
+  }
 }

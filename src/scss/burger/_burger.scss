@@ -1,11 +1,11 @@
 .burger {
   position: fixed;
   top: 0;
-  left: -150%;
+  left: -100%;
   width: 100%;
   min-width: 320px;
   max-width: 360px;
-  height: 100vh;
+  height: 100%;
   background-color: #fff;
   box-sizing: border-box;
   box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2),
@@ -14,7 +14,19 @@
   overflow: scroll;
   z-index: 10;
   @include medium;
-  transition: 0.5s;
+  transition: 1s;
+
+  @include mediaQ($mqDm) {
+    max-width: 302px;
+  }
+
+  @include mediaQ($mqDl) {
+    position: absolute;
+    left: 0;
+    max-width: 302px;
+
+    box-shadow: none;
+  }
 
   &::-webkit-scrollbar {
     display: none;

@@ -4,9 +4,11 @@
   &__wrapper {
     display: flex;
     flex-direction: column;
+
     align-items: center;
     width: 100%;
     height: 147px;
+    margin: 0 auto;
     border-top: 1px solid $border_color;
     & > * {
       margin-bottom: 16px;
@@ -40,6 +42,7 @@
   &__warning {
     max-width: 330px;
     @include mediaQ($mqT) {
+      margin-left: auto;
       text-align: right;
     }
   }
